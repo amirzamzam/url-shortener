@@ -7,9 +7,11 @@ const app = express();
 
 
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'))
+app.use(express.static('views'));
 app.use(bodyParser.json());
 app.use(cors());
+
+// app.use(express.static(__dirname + '/public'));
 
 app.get('/new/:urlToShorten(*)', function(req,res,next){
 var urlToShorten = req.params.urlToShorten;
