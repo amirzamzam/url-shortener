@@ -11,6 +11,12 @@ app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/new/:urlToShorten(*)', function(req,res,next){
+var urlToShorten = req.params.urlToShorten;
+  
+
+});
+
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
   console.log("This is working");
