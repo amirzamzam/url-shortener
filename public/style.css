@@ -84,3 +84,7 @@ footer > a {
 .color{
 color:pink;
 }
+
+.input{
+  display:inline;
+}
