@@ -7,7 +7,7 @@ const app = express();
 
 
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('views'));
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cors());
 
