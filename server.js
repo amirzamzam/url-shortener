@@ -3,11 +3,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const angular = require('angular');
 const app = express();
 
 
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
+app.use(express.static('views'));
 app.use(bodyParser.json());
 app.use(cors());
 
