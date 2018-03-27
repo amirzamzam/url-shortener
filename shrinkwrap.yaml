@@ -1,4 +1,5 @@
 dependencies:
+  angular: 1.6.9
   body-parser: 1.18.2
   cors: 2.8.4
   express: 4.16.3
@@ -13,6 +14,10 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-63d99gEXI6OxTopywIBcjoZ0a9I=
+  /angular/1.6.9:
+    dev: false
+    resolution:
+      integrity: sha512-6igWH2GIsxV+J38wNWCh8oyjaZsrIPIDO35twloIUyjlF2Yit6UyLAWujHP05ma/LFxTsx4NtYibRoMNBXPR1A==
   /array-flatten/1.1.1:
     dev: false
     resolution:
@@ -492,6 +497,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
+  angular: ^1.6.9
   body-parser: ^1.18.2
   cors: ^2.8.4
   express: ^4.16.3
