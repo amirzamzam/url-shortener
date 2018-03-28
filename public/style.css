@@ -89,3 +89,7 @@ color:pink;
   display:inline;
   max-width:20%;
 }
+
+.btn{
+line-height:1.5em;
+}
