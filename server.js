@@ -12,6 +12,9 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cors());
 
+//connect to database
+mongoose.connect(process.env.MONGODB_URI);
+
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
   response.sendFile(__dirname + '/views/index.html')
