@@ -63,9 +63,9 @@ if(err) return res.send('Error reading database');
   var re = new RegExp("^(http|https)://", "i");
   var strToCheck = data.originalURL;
   if(re.test(strToCheck)){
-  res.redirect(301, data.originalURL);
+  res.redirect(data.originalURL);
   }else{
-  res.redirect(301, 'http://' + data.originalURL);
+  res.redirect('http://' + data.originalURL);
   }
 
 });   
