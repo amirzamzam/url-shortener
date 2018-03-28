@@ -90,6 +90,6 @@ color:pink;
   max-width:20%;
 }
 
-.btn{
-line-height:1.5em;
+.alignment{
+vertical-align: baseline;
 }
