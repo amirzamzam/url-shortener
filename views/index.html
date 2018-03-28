@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   
-  <head ng>
+  <head ng-app="shortURLApp">
     <title>Url Shortener</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,8 +19,9 @@
       <a href="https://www.freecodecamp.org/challenges/url-shortener-microservice">FreeCodeCamp: API and Microservices</a>
     </h2>
     
-    <section style="margin-top:60px">
-    <input class="input" placeholder="Enter URL">
+    <section style="margin-top:60px" ng-controller="shortAppCtrl">
+      {{urlToShorten}}
+    <input class="input" placeholder="Enter URL" ng-model="urlToShorten">
       <a class="btn btn-primary" style="vertical-align:baseline">Get ShortURL</a>
     </section>
     

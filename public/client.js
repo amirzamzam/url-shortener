@@ -6,8 +6,8 @@
 // you are welcome!
 var app = angular.module('shortURLApp', []);
 
-app.controller('shortAppCtrl', function($scope){
-$scope.test = "Hello World";
+app.controller('shortAppCtrl', ($scope) =>{
+  $scope.urlToShorten = "Hello World";
 
 });
 
