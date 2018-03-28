@@ -26,10 +26,32 @@ var urlToShorten = req.params.urlToShorten;
   var regex = expression;
   
   if(regex.test(urlToShorten)===true){
-  return res.json({urlToShorten});
+    var short = Math.floor(Math.random()*100000).toString();
+    
+    var data = new shortURL(
+      {
+        originalURL: urlToShorten,
+        shorterURL : short  
+      });
+    
+    data.save(function(err){
+      if(err){
+      return res.send("Error saving to database");
+      }
+    });
+    
+    
+  return res.json(data);
   }else{
-  return res.json({urlToShorten : 'False'});
+  return res.json({urlToShorten : 'Failed'});
   }
+  
+  var data = ({
+  originalURL: urlToShorten,
+  shorterURL : 'Invalid URL'  
+  });
+  
+  return res.json(data);
   
 });
 
