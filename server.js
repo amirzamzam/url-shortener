@@ -28,8 +28,9 @@ var urlToShorten = req.params.urlToShorten;
   if(regex.test(urlToShorten)===true){
   return res.json({urlToShorten});
   }else{
-  
+  return res.json({urlToShorten : 'False'});
   }
+  
 });
 
 // listen for requests :)
