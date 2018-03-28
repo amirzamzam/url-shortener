@@ -40,20 +40,26 @@ var urlToShorten = req.params.urlToShorten;
       }
     });
     
-    
   return res.json(data);
-  }else{
-  return res.json({urlToShorten : 'Failed'});
+  
   }
   
   var data = ({
-  originalURL: urlToShorten,
+  originalURL: 'URL entered does not follow the correct format',
   shorterURL : 'Invalid URL'  
   });
   
   return res.json(data);
   
 });
+
+//Query database and forward to originalURL
+app.get('/:urlToForward', function(req,res,next){
+var shorterURL = req.params.urlToForward;
+  
+shortURL.findOne({'shorterURL' : shorterURL})   
+});
+
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
