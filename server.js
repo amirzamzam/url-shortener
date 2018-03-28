@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //connect to database
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds127129.mlab.com:27129/url-shortener");
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
@@ -22,7 +22,7 @@ app.get("/", (request, response) => {
 
 app.get('/new/:urlToShorten(*)', function(req,res,next){
 var urlToShorten = req.params.urlToShorten;
-  
+  var expression = /[-a-zA-z0-9@:%_\+.~#?
   return res.json({urlToShorten});
 
 });
