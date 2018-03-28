@@ -11,7 +11,10 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.use(express.static(__dirname + '/public'));
+// http://expressjs.com/en/starter/basic-routing.html
+app.get("/", (request, response) => {
+  response.sendFile(__dirname + '/views/index.html')
+})
 
 app.get('/new/:urlToShorten(*)', function(req,res,next){
 var urlToShorten = req.params.urlToShorten;
