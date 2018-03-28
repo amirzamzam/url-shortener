@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const shortURL = require('./model/shortURL');
 const app = express();
 
 
@@ -19,6 +20,7 @@ app.get("/", (request, response) => {
 app.get('/new/:urlToShorten(*)', function(req,res,next){
 var urlToShorten = req.params.urlToShorten;
   
+  return res.json({urlToShorten});
 
 });
 
