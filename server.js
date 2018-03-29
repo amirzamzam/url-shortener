@@ -61,11 +61,11 @@ shortURL.findOne({'shorterURL' : shorterURL}, function(err,data){
 
 if(err) return res.send('Error reading database');
   var re = new RegExp("^(http|https)://", "i");
-  var strToCheck = data.originalURL[0];
+  var strToCheck = data.originalURL;
   if(re.test(strToCheck)){
-  res.redirect(301, data.originalURL[0]);
+  res.redirect(301, data.originalURL);
   }else{
-  res.redirect(301, 'http://'+data.originalURL[0]);
+  res.redirect(301, 'http://'+data.originalURL);
   }
 
 });   
