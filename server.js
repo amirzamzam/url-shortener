@@ -44,7 +44,7 @@ var urlToShorten = req.params.urlToShorten;
   
   }
   
-  var data = ({
+  var data = new shortURL({
   originalURL: 'URL entered does not follow the correct format',
   shorterURL : 'Invalid URL'  
   });
