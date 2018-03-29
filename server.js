@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //connect to database
-mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds127129.mlab.com:27129/url-shortener");
+mongoose.connect("mongodb://amir:1234@ds127129.mlab.com:27129/url-shortener").then(
+  () => { console.log("Connected") },
+  err => { console.log("Not connected") }
+);;
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", (request, response) => {
